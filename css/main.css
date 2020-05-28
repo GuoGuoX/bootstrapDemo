@@ -1,0 +1,98 @@
+/* id为header的标签设置高度和颜色 */
+#header {
+    height: 200px;
+   
+}
+
+#header > .topbar {
+    height: 40px;
+    border-bottom: 1px solid #c0c0c0 ;
+    /* 设置行高,该标签的子标签会继承行高属性 */
+    line-height: 40px;
+}
+
+/* 对header头部进行分割 */
+header > .topbar > .container > .row > div {
+    height: 40px;
+    font-size: 12px;
+    color: #888;
+    /* background-color: #ca5656; */
+}
+/* 对header头部进行分割,加号选择器 */ 
+header > .topbar > .container > .row > div + div{
+    /* 左分割线 */
+   border-left: 1px solid #c0c0c0;
+    /* background-color: rgb(12, 202, 69); */
+}
+
+
+/* ================字体区域================= */
+/* 公共样式 
+    一般为了避免样式冲突，会对每个标签根据ID进行区分
+*/
+/* 字体图标 */
+body{
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Scans GB, WenQuanYi Micro Hei, scans-serif;
+}
+@font-face{
+    /* 为字体命名 */
+    font-family: 'myFont';
+    /*  */
+    src:url();
+}
+[class^="icon-"]
+[class*=" icon-"]{
+    font-family: myFont;
+    /* 关闭字体斜体 */
+    font-variant: normal;
+}
+/* 字体大小,颜色 */
+#header .mobile-link{
+    font-size: 12px;
+    color: #888;
+}
+/* 初始时隐藏img 
+    position: absolute;位置对其
+    left: 50%;相对偏移
+    margin-left: -60px;相对偏移
+    top: 30px;距离头的位置
+
+*/
+#header .mobile-link > img{
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 30px;
+}
+/* 取消a标签的下划线 */
+#header .mobile-link:hover{
+    text-decoration: none;
+}
+#header .login-link:hover{
+    text-decoration: none;
+}
+/* hover时展示img */
+#header .mobile-link:hover > img{
+    display: block;
+}
+
+
+/* ================字体区域================= */
+
+
+
+
+/* 所有section标签进行高度和颜色设置 */
+section{
+    height: 200px;
+    background-color: #fff;
+}
+
+/* 对所有的section进行奇偶行变色 */
+
+section:nth-of-type(2n+1){
+    height: 200px;
+    background-color: teal;
+}
+

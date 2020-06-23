@@ -1,7 +1,12 @@
 /* id为header的标签设置高度和颜色 */
 #header {
-    height: 200px;
+  
    
+}
+#header .bili-Navbar_logo{
+    vertical-align: middle;
+    line-height: 50px;
+    font-variant: normal;
 }
 
 #header > .topbar {
@@ -25,6 +30,10 @@ header > .topbar > .container > .row > div + div{
     /* background-color: rgb(12, 202, 69); */
 }
 
+nav {
+    color: #fff;
+}
+
 
 /* ================字体区域================= */
 /* 公共样式 
@@ -38,7 +47,7 @@ body{
     /* 为字体命名 */
     font-family: 'myFont';
     /*  */
-    src:url();
+    src:url('../font/iconfont.eot') format('embedded-opentype');
 }
 [class^="icon-"]
 [class*=" icon-"]{
@@ -64,6 +73,7 @@ body{
     left: 50%;
     margin-left: -60px;
     top: 30px;
+    z-index: 1001;
 }
 /* 取消a标签的下划线 */
 #header .mobile-link:hover{
@@ -77,22 +87,485 @@ body{
     display: block;
 }
 
+.bili-Navbar_logo::before {
+    content: "\E725";
+}
 
-/* ================字体区域================= */
+
+/* !================字体区域================= */
+
+
+/* ===================轮播图区域============ */
+
+/* 背景图居中 */
+#main_id > .carousel-inner > .item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;/*填充整个容器*/
+}
+
+/* 小图img方式展示,（可以避免背景图和img同时出现重叠）
+
+    屏幕宽度大于768px时，设置高度，小于时以img图片为最宽。
+*/
+@media (min-width: 768px){
+    #main_id > .carousel-inner > .item {
+        height: 410px;
+    }
+}
+
+
+/* 特色说明 */
+#explain{
+    padding: 50px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+#explain i{
+    font-size: 20px;
+}
+#explain > .container >.row div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+#explain > .container >.row a{
+    text-decoration: none;
+    color:rgb(59, 57, 57);
+}
+
+#explain > .container >.row a:hover{
+    color: red;
+   
+}
+#explain > .container >.row div:hover{
+   text-decoration: none;
+   
+}
+/* #explain > .container >.row div:nth-of-type(2n+1){
+    background-color: tomato;
+} */
+
+
+
+/* 预约 */
+#ljyy {
+    height: 50px;
+    /* 边框底部区域分割线 */
+    border-bottom: 1px solid #c0c0c0;
+    margin-top: 20px;
+    
+}
+#ljyy > .container > p{
+    /* line-height: 50px; */
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+#ljyy > .container > .pull-left > span,#ljyy > .container > .pull-left > a{
+    color: red;
+}
+
+#ljyy > .container > .pull-left > a,#ljyy > .container > .pull-left > a:hover{
+    border-bottom: 1px dashed #e92322;
+    text-decoration: none;
+}
+#ljyy i{
+    font-size: 18px;
+}
+
+/* 产品区域 */
+#products{
+    background-color: rgb(231, 229, 229);
+}
+#products > .container a{
+    background-color: transparent;
+}
+
+#products > .container > .tab-content{
+    padding: 20px 0;
+}
+
+#abc{
+    height: 100px;
+}
+
+/* 优化：这样写在PC端会始终有横向滚动条 */
+/* 滑动条 */
+/* #products > .container > .ul-wapper {
+    /* 当容器超出时显示滑动条 
+    overflow-x: scroll;
+} */
+
+
+/* !===================轮播图区域============ */
+
+/* 新闻区域 */
+#news  {
+    margin-bottom: 1px;
+    padding: 50px 0px;
+    border-bottom: 1px solid #c0c0c0;
+}
+#news > .container >  .row .nav-pills {
+   
+    padding: 15px 0;
+  
+}
+#news > .container >  .row .nav-pills a{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 18px 18px;
+}
+#news > .container >  .row .nav-pills a:hover{
+    background-color: #c0c0c0;
+}
+
+
+#news > .container > .row  .new-title {
+   
+    /* 新闻版块 */
+    border-bottom: 1px dashed #c0c0c0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    margin-right: 10px;
+}
+
+#news > .container > .row  .new-title::after{
+    border-radius: 5px;
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c0c0c0;
+    bottom: -5px;
+    right: -10px;
+    position: absolute;
+}
+#news > .container > .row .tab-content{
+  padding: 15px 0;
+ 
+}
+
+
+/* ===============合作伙伴================= */
+#hzhb{
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* =========轮播图左右滑动========= */
 
 
 
 
-/* 所有section标签进行高度和颜色设置 */
-section{
-    height: 200px;
+/* CSS覆盖 */
+.navbar-myCSS {
+    background-color: #fff;
+    border-color: rgb(241, 237, 237);
+    margin-bottom: 0px;
+    top: 0px;
+    width: 100%;
+  }
+  .navbar-myCSS .navbar-brand {
+    color: #777;
+  }
+  .navbar-myCSS .navbar-brand:hover,
+  .navbar-myCSS .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+  }
+  .navbar-myCSS .navbar-text {
+    color: #777;
+  }
+  .navbar-myCSS .navbar-nav > li > a {
+    color: #777;
+    font-size: 14PX;
+    line-height: 48px;
+  }
+  .navbar-myCSS .navbar-nav > li > a:hover,
+  .navbar-myCSS .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #e92322;
+  }
+  .navbar-myCSS .navbar-nav > .active > a,
+  .navbar-myCSS .navbar-nav > .active > a:hover,
+  .navbar-myCSS .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border-bottom: 2px solid #e92322;
+  }
+  .navbar-myCSS .navbar-nav > .disabled > a,
+  .navbar-myCSS .navbar-nav > .disabled > a:hover,
+  .navbar-myCSS .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+  .navbar-myCSS .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+  }
+  .navbar-myCSS .navbar-toggle:hover,
+  .navbar-myCSS .navbar-toggle:focus {
+    background-color: #ddd;
+  }
+  .navbar-myCSS .navbar-toggle .icon-bar {
+    background-color: #888;
+  }
+  .navbar-myCSS .navbar-collapse,
+  .navbar-myCSS .navbar-form {
+    border-color: #e7e7e7;
+  }
+  .navbar-myCSS .navbar-nav > .open > a,
+  .navbar-myCSS .navbar-nav > .open > a:hover,
+  .navbar-myCSS .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  @media (max-width: 767px) {
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > li > a {
+      color: #777;
+    }
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #333;
+      background-color: transparent;
+    }
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #555;
+      background-color: #e7e7e7;
+    }
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-myCSS .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+      color: #ccc;
+      background-color: transparent;
+    }
+  }
+  .navbar-myCSS .navbar-link {
+    color: #777;
+  }
+  .navbar-myCSS .navbar-link:hover {
+    color: #333;
+  }
+  .navbar-myCSS .btn-link {
+    color: #777;
+  }
+  .navbar-myCSS .btn-link:hover,
+  .navbar-myCSS .btn-link:focus {
+    color: #333;
+  }
+  .navbar-myCSS .btn-link[disabled]:hover,
+  fieldset[disabled] .navbar-myCSS .btn-link:hover,
+  .navbar-myCSS .btn-link[disabled]:focus,
+  fieldset[disabled] .navbar-myCSS .btn-link:focus {
+    color: #ccc;
+  }
+
+
+  /* 标签 */
+  .nav-myTabs {
+  }
+  .nav-myTabs > li {
+    float: left;
+    margin-bottom: -1px;
+  }
+  .nav-myTabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-myTabs > li > a:hover {
+    border-color: #eeeeee #eeeeee #ddd;
+  }
+  .nav-myTabs > li.active > a,
+  .nav-myTabs > li.active > a:hover,
+  .nav-myTabs > li.active > a:focus {
+    color: #555555;
+    background-color: #fff;
+    border-bottom: 4px solid #e92322;
+    cursor: default;
+  }
+  .nav-myTabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+  }
+  .nav-myTabs.nav-justified > li {
+    float: none;
+  }
+  .nav-myTabs.nav-justified > li > a {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .nav-myTabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+  @media (min-width: 768px) {
+    .nav-myTabs.nav-justified > li {
+      display: table-cell;
+      width: 1%;
+    }
+    .nav-myTabs.nav-justified > li > a {
+      margin-bottom: 0;
+    }
+  }
+  .nav-myTabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+  }
+  .nav-myTabs.nav-justified > .active > a,
+  .nav-myTabs.nav-justified > .active > a:hover,
+  .nav-myTabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+  }
+  @media (min-width: 768px) {
+    .nav-myTabs.nav-justified > li > a {
+      border-bottom: 1px solid #ddd;
+      border-radius: 4px 4px 0 0;
+    }
+    .nav-myTabs.nav-justified > .active > a,
+    .nav-myTabs.nav-justified > .active > a:hover,
+    .nav-myTabs.nav-justified > .active > a:focus {
+      border-bottom-color: #fff;
+    }
+  }
+
+  /* tabs */
+  .panel-myDefault{
+      border: 0px;
+      border-radius: 0;
+      box-shadow: 1px 1px 5px #ccc ;
+  }
+
+  /* 标签体颜色  */
+  .panel-myDefault.actived{
+      background-color: #e92322;
+  }
+
+  .panel-myDefault.disabled{
     background-color: #fff;
 }
-
-/* 对所有的section进行奇偶行变色 */
-
-section:nth-of-type(2n+1){
-    height: 200px;
-    background-color: teal;
+.panel-myDefault.disabled .col-xs-6 p:nth-of-type(2n-1){
+    color: rgb(145, 136, 136);
+}
+.panel-myDefault.disabled .panel-body{
+    color: #3a3636;
 }
 
+.panel-myDefault.disabled #interest-rate{
+    color: #e92322;
+}
+
+
+  .panel-myDefault > .panel-heading {
+    color: #333333;
+    float: right;
+    width: 120px;
+    padding: 0;
+    height: 150px;
+    border-left: 1px dashed  #c0c0c0;
+    text-align: center;
+    /* 相对位置，设置后小圆才不会偏 */
+    position: relative;
+    color: rgb(231, 229, 229);
+  }
+
+
+  /* 年利率 */
+  #interest-rate{
+      font-size: 30px;
+      padding: 40px;
+      text-align: center;
+  }
+
+  /* 年利率 */
+  #interest-rate .interest{
+    font-size: 10px;
+    width: 30px;
+    text-align: center;
+    margin-top: -10px;
+    margin-left: 5px;
+}
+/* 产品信息悬浮展示 */
+.panel-myDefault > .panel-heading > .tooltips{
+    width: 100%;
+    position: absolute;
+    top: 22px;
+    text-align: center;
+    padding: 0%;
+}
+
+.panel-myDefault > .panel-heading > .tooltips .badge{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+.panel-myDefault > .panel-heading > .tooltips .badge-one{
+    color: #e92322;
+    border-color: #e92322;
+    padding: 0px;
+}
+.panel-myDefault > .panel-heading > .tooltips .badge-two{
+  color: cornflowerblue;
+  border-color:cornflowerblue;
+  padding: 0px;
+}
+
+
+
+    /* 圆 */
+    .panel-myDefault > .panel-heading::before{
+    content: '   ';
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(231, 229, 229);
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    }
+
+  .panel-myDefault > .panel-heading::after {
+    content: '  ';
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(231, 229, 229);
+    position: absolute;
+    left: -8px;
+    bottom: -8px;
+    box-shadow: 0px 1px 1px #ccc inset;
+  }
+  .panel-myDefault > .panel-body {
+    margin-right: 120px;
+    height: 150px;
+    color: rgb(231, 229, 229);
+  }
+
+  .panel-myDefault > .panel-body p{
+    margin-bottom: 1px;
+  }
+  .panel-myDefault > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+  }
+  .panel-myDefault > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333333;
+  }
+  .panel-myDefault > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+  }
+  /* 标签体颜色 */
+
+  

@@ -13,6 +13,7 @@
   
 需求六:标签横向滚动
   思路:宽度
+  
 需求七:轮播图左滑右滑
   思路:注册点击事件touchstart,touchmove,touchend
 
